@@ -34,7 +34,7 @@ variable that you're plotting.
 
 ```{r, eval=FALSE}
 library(plotly)
-plot_ly(mtcars, x = ~wt, y = ~mpg, type = "scatter")
+plot_ly(mtcars, x = ~wt, y = ~mpg, type = "scatter")  ## mode = "markers" in lecture
 ```
 
 ## Basic Scatterplot
