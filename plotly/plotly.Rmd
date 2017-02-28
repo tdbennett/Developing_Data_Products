@@ -42,6 +42,11 @@ plot_ly(mtcars, x = ~wt, y = ~mpg, type = "scatter")  ## mode = "markers" in lec
 ```{r, echo=FALSE, message=FALSE}
 library(plotly)
 plot_ly(mtcars, x = ~wt, y = ~mpg, type = "scatter")
+
+### ggplotly() turns any plot into a plot_ly html widget. Nice.
+
+### plotly_POST() posts it at the plot.ly website
+     ## have to set up some API keys first
 ```
 
 ## Scatterplot Color
