@@ -1,0 +1,26 @@
+---
+title: "Colorado Ski Areas"
+author: "TDB"
+date: "March 3, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+```{r map, echo = FALSE}
+library(leaflet)
+
+latlong <- data.frame(
+  lat = c(39.2973166, 39.3288851, 39.2906617),
+  lng = c(-76.5929798, -76.6206598, -76.5469683))
+
+
+my_map <- leaflet() %>% 
+  addTiles()
+my_map
+```
+
