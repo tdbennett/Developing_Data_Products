@@ -1,6 +1,5 @@
 ---
-title: "Colorado Ski Areas"
-author: "TDB"
+title: "Some Colorado Ski Areas"
 date: "March 3, 2017"
 output: html_document
 ---
@@ -10,17 +9,20 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-
 ```{r map, echo = FALSE}
 library(leaflet)
 
+skiareas <- c("Winter Park", "Breckenridge", "Crested Butte", "Vail", "Steamboat")
+
 latlong <- data.frame(
-  lat = c(39.2973166, 39.3288851, 39.2906617),
-  lng = c(-76.5929798, -76.6206598, -76.5469683))
+  lat = c(39.8868, 39.4817, 38.9122, 39.6403, 40.4850),
+  lng = c(-105.7625, -106.0384, -106.9624, -106.3742, -106.8317))
 
+# winter park, breck, CB, Vail, Steamboat
 
-my_map <- leaflet() %>% 
-  addTiles()
-my_map
+latlong %>% 
+  leaflet() %>%
+  addTiles() %>%
+  addMarkers(popup = skiareas)
 ```
 
